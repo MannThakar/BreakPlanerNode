@@ -7,7 +7,7 @@ import cors from "cors";
 import twilio from "twilio";
 
 const app = express();
-const port = 3001;
+const port = process.env.PORT || 3001;
 
 const accountSid = process.env.TWILIO_ACCOUNT_SID; // Get from .env
 const authToken = process.env.TWILIO_AUTH_TOKEN; // Get from .env
