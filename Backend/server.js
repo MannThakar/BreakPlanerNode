@@ -9,12 +9,9 @@ import twilio from "twilio";
 const app = express();
 const port = 3001;
 
-const accountSid = process.env.TWILIO_ACCOUNT_SID;
-const authToken = process.env.TWILIO_AUTH_TOKEN;
+const accountSid = process.env.TWILIO_ACCOUNT_SID; // Get from .env
+const authToken = process.env.TWILIO_AUTH_TOKEN; // Get from .env
 const client = twilio(accountSid, authToken); // Create the Twilio client with SID and Auth Token
-
-console.log("Twilio Account SID:", process.env.TWILIO_ACCOUNT_SID);
-console.log("Twilio Auth Token:", process.env.TWILIO_AUTH_TOKEN);
 
 app.use(cors());
 app.use(bodyParser.json());
