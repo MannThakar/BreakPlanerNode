@@ -1,9 +1,10 @@
-require("dotenv").config(); // Add this line to load the environment variables
+import dotenv from "dotenv";
+dotenv.config();
 
-const express = require("express");
-const bodyParser = require("body-parser");
-const cors = require("cors");
-const twilio = require("twilio");
+import express from "express";
+import bodyParser from "body-parser";
+import cors from "cors";
+import twilio from "twilio";
 
 const app = express();
 const port = 3001;
