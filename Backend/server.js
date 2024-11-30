@@ -8,10 +8,12 @@ const twilio = require("twilio");
 const app = express();
 const port = 3001;
 
-// Get Twilio credentials from environment variables
-const accountSid = process.env.TWILIO_ACCOUNT_SID; // Access account SID
-const authToken = process.env.TWILIO_AUTH_TOKEN; // Access auth token
-const client = twilio(accountSid, authToken);
+const accountSid = process.env.TWILIO_ACCOUNT_SID;
+const authToken = process.env.TWILIO_AUTH_TOKEN;
+const client = twilio(accountSid, authToken); // Create the Twilio client with SID and Auth Token
+
+console.log("Twilio Account SID:", process.env.TWILIO_ACCOUNT_SID);
+console.log("Twilio Auth Token:", process.env.TWILIO_AUTH_TOKEN);
 
 app.use(cors());
 app.use(bodyParser.json());
